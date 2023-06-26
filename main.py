@@ -13,8 +13,8 @@ def main():
         print(f"Category: {key}")
         for token in value:
             print(f"Token: {token}")
-            crawler.download_historical_data(category="crypto", symbol="DYDX", location='./data')
-            print("Lastest data: ", crawler.get_lastest_data(category="crypto", symbol="BTCUSDT"))
+            crawler.download_historical_data(category=key, symbol=token, location='./data')
+            print("Lastest data: ", crawler.get_lastest_data(category=key, symbol=token))
 
 
 if __name__ == '__main__':
