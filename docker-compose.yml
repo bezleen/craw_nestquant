@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  api:
+    container_name: craw-nestquant
+    build: .
+    restart: on-failure
+    volumes:
+      - ./:/webapps
+    environment:
+      - PYTHONUNBUFFERED=true
+    env_file:
+      - .env
+    command: python3 main.py
