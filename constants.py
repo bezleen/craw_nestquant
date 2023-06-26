@@ -1210,9 +1210,9 @@ LABEL = [
     "RUNE",
     "XMR"]
 CATEGORY = {
-    "Crypto": CRYPTO,
-    "Stocks": STOCKS,
-    "FX": FX,
-    "Fred": FRED,
-    "Label": LABEL
+    "crypto": CRYPTO,
+    "stocks": STOCKS,
+    "fx": FX,
+    "fred": FRED,
+    "label": LABEL
 }
