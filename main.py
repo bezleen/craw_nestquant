@@ -18,6 +18,8 @@ def main():
                 print("Lastest data: ", crawler.get_lastest_data(category=key, symbol=token))
             except Exception as e:
                 print(f"Error downloading")
+                with open("./log.txt", 'a') as f:
+                    f.writelines(f"Category: {key}, Token: {token}")
 
 
 if __name__ == '__main__':
