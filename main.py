@@ -13,8 +13,11 @@ def main():
         print(f"Category: {key}")
         for token in value:
             print(f"Token: {token}")
-            crawler.download_historical_data(category=key, symbol=token, location='./data')
-            print("Lastest data: ", crawler.get_lastest_data(category=key, symbol=token))
+            try:
+                crawler.download_historical_data(category=key, symbol=token, location='./data')
+                print("Lastest data: ", crawler.get_lastest_data(category=key, symbol=token))
+            except Exception as e:
+                print(f"Error downloading")
 
 
 if __name__ == '__main__':
